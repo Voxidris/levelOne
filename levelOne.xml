@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project levelOne">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/TD"/>
+    <property name="dir.jarfile" value="${dir.buildfile}"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/levelOne.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="front.App"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${dir.workspace}/levelOne/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.media.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.web.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.graphics.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.swing.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.fxml.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.controls.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/src.zip"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx.base.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.jarfile}/openjfx-11.0.2_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib/javafx-swt.jar"/>
+        </jar>
+    </target>
+</project>
